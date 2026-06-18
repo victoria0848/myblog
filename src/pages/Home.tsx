@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <main>
       <header>
-        <h1>MyBlog</h1>
+        <h1><span>My</span>Blog</h1>
 
         <div className="filter-buttons">
           {categories.map((category) => (
