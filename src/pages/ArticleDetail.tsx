@@ -57,13 +57,13 @@ export default function ArticleDetail() {
   }
 
   if (!article) {
-    return <p>Artiklen blev ikke fundet.</p>;
+    return <p>Øv! Artiklen blev ikke fundet</p>;
   }
 
   return (
     <main className="article-page">
       <Link to="/" className="back-btn">
-        Tilbage til forsiden
+        Tilbage
       </Link>
 
       <article className="full-article">

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import BlogCard from "../components/BlogCard";
 import { type BlogArticle } from "../types";
+
 
 const HYGRAPH_ENDPOINT =
   "https://eu-west-2.cdn.hygraph.com/content/cmowr88b2008007v03ny07r70/master";
@@ -76,33 +77,13 @@ export default function Home() {
       </header>
 
       <div className="blog-grid">
-        {filteredArticles.map((article) => (
-          <article key={article.id} className="blog-card">
-            <img
-              src={article.image?.url}
-              alt={article.title}
-            />
-
-            <h2>{article.title}</h2>
-
-            <p>
-              <strong>Forfatter:</strong> {article.author}
-            </p>
-
-            <p>
-              <strong>Dato:</strong> {article.date}
-            </p>
-
-            <p>
-              <strong>Kategori:</strong> {article.category}
-            </p>
-
-            <Link to={`/artikel/${article.id}`}>
-              Læs mere
-            </Link>
-          </article>
-        ))}
-      </div>
+  {filteredArticles.map((article) => (
+    <BlogCard
+        key={article.id}
+        article={article}
+        />
+    ))}
+    </div>
     </main>
   );
 }
