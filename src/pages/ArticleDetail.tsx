@@ -62,9 +62,7 @@ export default function ArticleDetail() {
 
   return (
     <main className="article-page">
-      <Link to="/" className="back-btn">
-        Tilbage
-      </Link>
+      <Link to="/" className="back-btn">&larr; Tilbage </Link>
 
       <article className="full-article">
         <p className="category-badge">{article.category}</p>
